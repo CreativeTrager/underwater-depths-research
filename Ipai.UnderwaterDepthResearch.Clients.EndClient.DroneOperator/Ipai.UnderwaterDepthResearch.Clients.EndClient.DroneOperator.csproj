@@ -1,0 +1,53 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="compas.jpg" />
+    <None Remove="compas.png" />
+    <None Remove="compas_2.png" />
+    <None Remove="errorCamera.jpg" />
+    <None Remove="errorCamera.png" />
+    <None Remove="errorImg.png" />
+    <None Remove="img_rotate_horizont.png" />
+    <None Remove="img_static_horizont.png" />
+    <None Remove="img_vertical_indicator.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MQTTnet" Version="3.1.1" />
+    <PackageReference Include="System.Drawing.Common" Version="6.0.0" />
+    <PackageReference Include="System.IO.Ports" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="GMap.NET.Core">
+      <HintPath>bin\Release\net5.0-windows\GMap.NET.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="GMap.NET.WindowsPresentation">
+      <HintPath>bin\Release\net5.0-windows\GMap.NET.WindowsPresentation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Maps.MapControl.WPF">
+      <HintPath>..\MapGPS\bin\Debug\net6.0-windows\Microsoft.Maps.MapControl.WPF.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="compas.jpg" />
+    <Resource Include="compas.png" />
+    <Resource Include="compas_2.png" />
+    <Resource Include="errorCamera.jpg" />
+    <Resource Include="errorCamera.png" />
+    <Resource Include="errorImg.png" />
+    <Resource Include="img_rotate_horizont.png" />
+    <Resource Include="img_static_horizont.png" />
+    <Resource Include="img_vertical_indicator.png" />
+  </ItemGroup>
+
+</Project>
