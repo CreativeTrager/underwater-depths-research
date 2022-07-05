@@ -2,11 +2,12 @@
 import socket
 import cv2
 import numpy
+import sys
 
-TCP_IP = '192.168.1.2'
+TCP_IP = '<SERVER_IP_ADDRESS>'
 TCP_PORT = 4141
 
-capture = cv2.VideoCapture(0)
+capture = cv2.VideoCapture(1)
 while True:
     try:
         sock = socket.socket()

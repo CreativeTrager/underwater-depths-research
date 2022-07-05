@@ -1,10 +1,13 @@
 #!/usr/bin/python
 import socket
 import numpy
+import os
 
 
-serverIp = '192.168.0.131'
+serverIp = '<SERVER_IP_ADDRESS>'
 serverPort = 4444
+
+tty = os.open("/dev/ttyS0", os.O_RDWR)
 
 sock = socket.socket()
 while True:
@@ -13,9 +16,8 @@ while True:
 
         while True:
             data = sock.recv(40)
-            print(data)
-            print(data.decode())
-
+            if (len(data)>3):
+                os.write(tty, data)
         sock.close()
     except:
         l = 1
